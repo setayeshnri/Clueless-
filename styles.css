@@ -1,0 +1,65 @@
+h1 {
+  text-align: center;
+  color: rgb(231, 226, 226);
+  font-size: 80px;
+  border: none;
+  background-color: hotpink;
+  border-radius: 50%;
+  width: 400px;
+  height: 130px;
+  padding-top: 30px;
+}
+
+body {
+  background-color: rgba(253, 232, 0, 0.452);
+  margin: 0px;
+}
+
+p {
+  text-align: center;
+  font-size: x-large;
+  margin: 50px;
+}
+.middle {
+  margin-top: 80px;
+  display: flex;
+  margin-bottom: 70px;
+}
+.text {
+  font-size: 30px;
+}
+.cast {
+  margin-top: 30px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: larger;
+}
+.cast-pic {
+  width: 100%;
+}
+h2 {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+.navbar {
+  background-color: hotpink;
+  display: flex;
+  justify-content: right;
+
+  padding: 20px;
+
+  position: fixed;
+  width: 100%;
+}
+a {
+  font-size: 24px;
+  text-decoration: none;
+  margin-right: 40px;
+}
+.pedarsag {
+  margin-left: 234px;
+  padding-top: 50px;
+}
