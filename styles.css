@@ -46,13 +46,16 @@ h2 {
 }
 .navbar {
   background-color: hotpink;
-  display: flex;
-  justify-content: right;
-
+  margin-top: -30px;
   padding: 20px;
 
   position: fixed;
   width: 100%;
+  font-family: monospace;
+}
+.right-half {
+  display: flex;
+  justify-content: right;
 }
 a {
   font-size: 24px;
@@ -62,4 +65,14 @@ a {
 .pedarsag {
   margin-left: 234px;
   padding-top: 50px;
+}
+.logo {
+  display: flex;
+  justify-content: left;
+  margin: auto;
+  margin-bottom: -20px;
+  padding-top: 10px;
+  
+  font-size: 30px;
+  color: rgb(234, 230, 230);
 }
