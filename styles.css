@@ -20,14 +20,23 @@ p {
   font-size: x-large;
   margin: 50px;
 }
+
 .middle {
-  margin-top: 80px;
   display: flex;
+  margin-top: 80px;
   margin-bottom: 70px;
 }
+
+@media only screen and (max-width: 768px) {
+  .middle {
+    display: inline;
+  }
+}
+
 .text {
   font-size: 30px;
 }
+
 .cast {
   margin-top: 30px;
   line-height: 1.6;
@@ -52,9 +61,10 @@ h2 {
   width: 100%;
   font-family: monospace;
   display: flex;
-  height: 30px;
+  min-height: 30px;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .right-half {
   display: flex;
@@ -74,8 +84,8 @@ a:link {
   justify-content: center;
   padding-top: 50px;
 }
+
 .logo {
-  margin: auto;
   padding-top: 10px;
   font-size: 30px;
   color: rgb(234, 230, 230);
@@ -94,22 +104,14 @@ a:link {
   margin: auto;
 }
 
-/* Hide the images by default */
 .slide {
   display: none;
 }
 
-/* Style the images */
-img {
-  width: 100%;
-}
-
-/* Define the fade animation */
 .fade {
   animation: fade 3s infinite;
 }
 
-/* Keyframe animation for fading */
 @keyframes fade {
   0%,
   33.33% {
@@ -125,27 +127,97 @@ img {
   }
 }
 
-/* Set the animation delay for each slide */
-.slide:nth-child(1) {
-  animation-delay: 0s;
+#container {
+  position: relative;
+  padding: 25px;
+  margin: auto;
+  overflow: hidden;
+}
+#container input {
+  display: none;
+}
+#container input:checked + label {
+  background-color: white;
+}
+#container input:checked + label + .slide {
+  transform: translateX(0);
+  opacity: 1;
+}
+#container input:checked ~ .slide {
+  transform: translateX(100%);
+}
+#container label {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  margin: calc(80vh - 30px) 6px 0 6px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+#container .slide {
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition-duration: 0.4s;
+  opacity: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14vw;
+  color: #fff;
 }
 
-.slide:nth-child(2) {
-  animation-delay: 3s;
+#container .background1 {
+  background-image: url("cherr.avif");
+}
+#container .background2 {
+  background-image: url("dionne.webp");
+}
+#container .background3 {
+  background-image: url("tai.jpeg");
+}
+#container .background4 {
+  background-image: url("josh.webp");
+}
+#container .background5 {
+  background-image: url("christion.webp");
+}
+#container .background6 {
+  background-image: url("el.webp");
 }
 
-.slide:nth-child(3) {
-  animation-delay: 6s;
+#container p {
+  place-self: flex-end;
+  color: black;
+  text-shadow: -1px 0 rgba(245, 225, 11, 0.983), 0 1px rgba(245, 225, 11, 0.983),
+    1px 0 rgba(245, 225, 11, 0.983), 0 -1px rgba(245, 225, 11, 0.983);
+  font-size: 4vw;
 }
-
-.slide:nth-child(4) {
-  animation-delay: 9s;
+.images {
+  width: 100%;
+  height: 560px;
+  margin-top: 60px;
 }
-
-.slide:nth-child(5) {
-  animation-delay: 12s;
+.spanimg {
+  background-image: url("cherr.avif");
 }
-
-.slide:nth-child(6) {
-  animation-delay: 15s;
+@media only screen and (max-width: 380px) {
+  .cherimg {
+    width: 100%;
+  }
+  .right-half {
+    display: flex;
+  }
 }
